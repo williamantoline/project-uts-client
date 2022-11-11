@@ -5,22 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>List View</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="header">Popular Movies</div>
-      <div class="movie-list">
-        <div class="list">
-          <div class="left">
-            <img src="" alt="abc.img"/>
-          </div>
-          <div class="right">
-            <h1>Gorilla vs King Kong</h1>
-            <p>Lorem Ipsum</p>
-          </div>
+      <div class="movie-list" id="movieList">
+        <div class="loading-interaction" id="loadingInteraction">
+          Loading...
         </div>
+        <!-- <div class="movie">
+          <div class="movie-left">
+            <img class="img" src="img.jpg" alt="img.jpg" />
+          </div>
+          <div class="movie-center">
+            <p class="movie-title">Gorilla vs King Kong</p>
+            <p class="movie-description">Lorem Ipsum</p>
+          </div>
+          <div class="movie-right">
+            <a href="/detail.html">
+              <img src="arrow-right.svg" />
+            </a>
+          </div>
+        </div> -->
       </div>
     </div>
   </body>
+
+  <script>
+    let movieListEl = document.getElementById("movieList");
+    let loadingInteractionEl = document.getElementById("loadingInteraction");
+
+    const buildElement = (tag, meta, inner = "") => {
+      let _tag = document.createElement(tag);
+      Object.keys(meta).forEach(key => {
+        let val = meta[key];
+        _tag.setAttribute(key, val);
+      });
+      _tag.innerHTML = inner;
+      return _tag;
+    }
+
+    const buildItem = (data) => {
+      _img = buildElement("img", {"class": "img", "src": "img.jpg"});
+      _movie_left = buildElement("div", {"class": "movie-left"});
+      _movie_left.appendChild(_img);
+
+      _p_one = buildElement("p", {"class": "movie-title"}, data.title);
+      _p_two = buildElement("p", {"class": "movie-description"}, data.tagline);
+      _movie_center = buildElement("div", {"class": "movie-center"});
+      _movie_center.appendChild(_p_one);
+      _movie_center.appendChild(_p_two);
+
+      _img = buildElement("img", {"class": "img", "src": "ic_arrow_right.svg"});
+      _a = buildElement("a", {"href": "detail.html"});
+      _a.appendChild(_img);
+      _movie_right = buildElement("div", {"class": "movie-right"});
+      _movie_right.appendChild(_a);
+
+      _movie = buildElement("div", {"class": "movie"});
+      _movie.appendChild(_movie_left);
+      _movie.appendChild(_movie_center);
+      _movie.appendChild(_movie_right);
+      
+      return _movie;
+    }
+    
+    const loadMoviesElements = (data) => {
+      loadingInteractionEl.style.display = "none";
+
+      data.forEach(dt => {
+        let element = buildItem(dt);
+        movieListEl.appendChild(element);
+      });
+    }
+
+    axios.get("http://localhost:3000/api/movies")
+    .then(res => loadMoviesElements(res.data));
+  </script>
 </html>
