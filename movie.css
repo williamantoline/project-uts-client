@@ -1,0 +1,114 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #525252;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 640px;
+  background: white;
+}
+
+@media only screen and (max-width: 640px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.header{
+  padding: 10px;
+  background-color: #a8a8a8;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  box-shadow: 0px 0px 1px 1px gray;
+}
+
+.header .movie-title {
+  font-size: 20px;
+  margin: auto;
+}
+
+.movie-pic{
+  box-shadow: 0px 0px 1px 1px gray;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.movie-pic .img {
+  margin: auto;
+  padding: 15px;
+  width: 250px;
+  height: 350px;
+  display: block;
+}
+
+
+.overview{
+  padding: 5px 20px;
+  background-color: #afafaf;
+}
+
+.movie-detail{
+  padding: 20px;
+  font-weight: bold;
+}
+
+.movie-overview{
+  margin-bottom: 20px;
+}
+
+.director{
+  margin-bottom: 18px;
+}
+
+.writer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.cast{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.left{
+  width: 50%;
+}
+
+.right{
+  width: 50%;
+}
+
+.cast{
+  display: flex;
+}
+
+.text-bold{
+  font-weight: bold;
+}
+
+.mb-18{
+  margin-bottom: 18px;
+}
+
+.text-light{
+  font-weight: 400;
+}
+
+.text-gray {
+  color: #a8a8a8;
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail | Godzilla vs. Kong</title>
+    <link rel="stylesheet" href="movie.css">
+  </head>
+  <body>
+    <div class="container" id="container">
+      <!-- <div class="header">
+        <a href='index.html'>Back</a>
+        <h1 class="movie-title">Godzilla vs. Kong</h1>
+      </div>
+      <div class="movie-pic">
+        <img class="img" src="img.jpg"/>
+        <h4 class="text-bold">Godzilla vs. Kong <span class="text-light">(2021)</span></h4>
+        <p class="text-gray text-bold">PG-13 | 2021-03-24 | English</p>
+      </div> 
+      <div class="overview">
+        <h3 class="">Overview</h3>
+      </div>
+      <div class="movie-detail">
+        <p class="movie-overview">In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages.</p>
+        <div class="director">
+          <h4>Adam Wingard</h4>
+          <p class="text-gray">Director</p>
+        </div>
+        <div class="writer">
+          <div class="left">
+            <h4>Terry Rossio</h4>
+            <p class="text-gray mb-20">Writer</p>
+            <h4>Eric Pearson</h4>
+            <p class="text-gray mb-20">Writer</p>
+            <h4>Zach Shields</h4>
+            <p class="text-gray mb-20">Writer</p>
+          </div>
+          <div class="right">
+            <h4>Michael Dougherty</h4>
+            <p class="text-gray mb-20">Writer</p>
+            <h4>Max Borenstein</h4>
+            <p class="text-gray mb-20">Writer</p> 
+          </div>
+        </div>
+        <div class="cast">
+          <div class="left">
+            <h4>Alexander Skarsgård</h4>
+            <p class="text-gray mb-20">Cast</p>
+            <h4>Rebecca Hall</h4>
+            <p class="text-gray">Cast</p>        
+          </div>
+          <div class="right">
+            <h4>Millie Bobby Brown</h4>
+            <p class="text-gray mb-20">Cast</p>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <script>
+      const container = document.querySelector("#container")
+
+      const data = {
+        "budget": 200000000,
+        "genres": ["Action", "Science Fiction"],
+        "homepage": "https://www.godzillavskong.net",
+        "id": 399566,
+        "original_language": "English",
+        "overview": "In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages.",
+        "popularity": 10755.513,
+        "poster_path": "/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
+        "release_date": "2021-03-24",
+        "revenue": 298573106,
+        "runtime": 113,
+        "tagline": "One Will Fall",
+        "title": "Godzilla vs. Kong",
+        "vote_average": 8.4,
+        "vote_count": 4108,
+        "external_ids": {
+          "imdb_id": "tt5034838",
+          "facebook_id": "GodzillaVsKong",
+          "instagram_id": "godzillavskong",
+          "twitter_id": "GodzillavsKong"
+        },
+        "similar": [
+          { "id": 15767, "title": "Godzilla: Final Wars" },
+          { "id": 929, "title": "Godzilla" },
+          { "id": 12636, "title": "Godzilla Against MechaGodzilla" },
+          { "id": 18983, "title": "Godzilla, King of the Monsters!" },
+          { "id": 315011, "title": "Shin Godzilla" },
+          { "id": 36679, "title": "Godzilla vs. King Ghidorah" },
+          { "id": 18289, "title": "Godzilla vs. Biollante" },
+          { "id": 268896, "title": "Pacific Rim: Uprising" },
+          { "id": 536115, "title": "Godzilla: The Planet Eater" },
+          { "id": 1678, "title": "Godzilla" },
+          { "id": 254, "title": "King Kong" },
+          { "id": 7191, "title": "Cloverfield" },
+          { "id": 68726, "title": "Pacific Rim" },
+          { "id": 293167, "title": "Kong: Skull Island" },
+          { "id": 19333, "title": "Terror of Mechagodzilla" },
+          { "id": 26947, "title": "Gamera vs. Guiron" },
+          { "id": 803386, "title": "The Legend of King Kong" },
+          { "id": 19742, "title": "Rodan" },
+          { "id": 54433, "title": "Gamera: Guardian of the Universe" },
+          {
+            "id": 39468,
+            "title": "Godzilla vs. Megaguirus: The G Extermination Strategy"
+          }
+        ],
+        "certification": "PG-13",
+        "directors": [{ "id": 98631, "name": "Adam Wingard" }],
+        "writers": [
+          { "id": 1706, "name": "Terry Rossio" },
+          { "id": 11012, "name": "Michael Dougherty" },
+          { "id": 579281, "name": "Eric Pearson" },
+          { "id": 1080778, "name": "Max Borenstein" },
+          { "id": 1443683, "name": "Zach Shields" }
+        ],
+        "cast": [
+          { "id": 28846, "name": "Alexander Skarsgård" },
+          { "id": 1356210, "name": "Millie Bobby Brown" },
+          { "id": 15556, "name": "Rebecca Hall" }
+        ],
+        "trailer_yt": "odM92ap8_c0"
+      }
+    
+      const buildElement = (tag, meta, inner = "") => {
+        let _tag = document.createElement(tag);
+        Object.keys(meta).forEach(key => {
+          let val = meta[key];
+          _tag.setAttribute(key, val);
+        });
+        _tag.innerHTML = inner;
+        return _tag;
+      }
+
+      const buildItem = (data) => {
+        _div_header = buildElement("div", {"class": "header"})
+        _a = buildElement("a", {"href": "index.html"}, "Back")
+        _h_one = buildElement("h1", {"class": "movie-title"}, data.title)
+        _div_header.appendChild(_a)
+        _div_header.appendChild(_h_one)
+        
+        _div_pic = buildElement("div", {"class": "movie-pic"})
+        _img = buildElement("img", {"class": "img", "src": `https://image.tmdb.org/t/p/original${data.poster_path}`});
+        _h_four = buildElement("h4", {"class": "text-bold"}, data.title)
+        _year = buildElement("span", {"class": "text-light"}, `(${data.release_date.split("-")[0]})`)
+        _h_four.appendChild(_year)
+        _p_one = buildElement("p", {"class": "text-gray text-bold"}, `${data.certification} | ${data.release_date} | ${data.original_language}`)
+        _div_pic.appendChild(_img)
+        _div_pic.appendChild(_h_four)
+        _div_pic.appendChild(_p_one)
+
+        _div_overview = buildElement("div", {"class": "overview"})
+        _h_three = buildElement("h3", {"class": "text-bold"}, "Overview")
+        _div_overview.appendChild(_h_three)
+
+        _div_movie_detail = buildElement("div", {"class": "movie-detail"})
+        _p_overview = buildElement("p", {"class": "movie-overview"}, data.overview)
+        
+        _div_director = buildElement("div", {"class": "director"})
+        _h_director = buildElement("h4", {"class": "text-bold"}, data.directors[0].name)
+        _p_director = buildElement("p", {"class": "text-gray"}, "Director")
+        _div_director.appendChild(_h_director)
+        _div_director.appendChild(_p_director)
+        
+        _div_writer = buildElement("div", {"class": "writer"})
+        _div_writer_left = buildElement("div", {"class": "left"})
+        _div_writer_right = buildElement("div", {"class": "right"})
+        
+        for(let i=0; i<data.writers.length; i=i+2){
+          _h_writer = buildElement("h4", {"class": "text-bold"}, data.writers[i].name)
+          _p_writer = buildElement("p", {"class": "text-gray mb-18"}, "Writer")
+          _div_writer_left.appendChild(_h_writer)  
+          _div_writer_left.appendChild(_p_writer)  
+        }
+        
+        for(let i=1; i<data.writers.length; i=i+2){
+          _h_writer = buildElement("h4", {"class": "text-bold"}, data.writers[i].name)
+          _p_writer = buildElement("p", {"class": "text-gray mb-18"}, "Writer")
+          _div_writer_right.appendChild(_h_writer)  
+          _div_writer_right.appendChild(_p_writer)  
+        }
+        
+        _div_writer.appendChild(_div_writer_left)
+        _div_writer.appendChild(_div_writer_right)
+        
+        _div_cast = buildElement("div", {"class": "cast"})
+        _div_cast_left = buildElement("div", {"class": "left"})
+        _div_cast_right = buildElement("div", {"class": "right"})
+        
+        for(let i=0; i<data.cast.length; i=i+2){
+          _h_cast = buildElement("h4", {"class": "text-bold"}, data.cast[i].name)
+          _p_cast = buildElement("p", {"class": "text-gray mb-18"}, "cast")
+          _div_cast_left.appendChild(_h_cast)  
+          _div_cast_left.appendChild(_p_cast)  
+        }
+        
+        for(let i=1; i<data.cast.length; i=i+2){
+          _h_cast = buildElement("h4", {"class": "text-bold"}, data.cast[i].name)
+          _p_cast = buildElement("p", {"class": "text-gray mb-18"}, "cast")
+          _div_cast_right.appendChild(_h_cast)  
+          _div_cast_right.appendChild(_p_cast)  
+        }
+        
+        _div_cast.appendChild(_div_cast_left)
+        _div_cast.appendChild(_div_cast_right)
+
+        _div_movie_detail.appendChild(_p_overview)
+        _div_movie_detail.appendChild(_div_director)
+        _div_movie_detail.appendChild(_div_writer)
+        _div_movie_detail.appendChild(_div_cast)
+        
+        container.appendChild(_div_header)
+        container.appendChild(_div_pic)
+        container.appendChild(_div_overview)
+        container.appendChild(_div_movie_detail)
+      }
+
+      buildItem(data)
+      
+    </script>
+  </body>
+</html>
