@@ -1,0 +1,99 @@
+
+      
+      <!-- <div class="header">
+        <div class="left">
+          <a href='index.html'>
+            <div>
+              <img src="ic_arrow_left.svg" alt="<" />
+              <span>Back</span>
+            </div>
+          </a>
+        </div>
+        <div class="center">
+          <h1 class="movie-title">Godzilla vs. Kong</h1>
+        </div>
+        <div class="right"></div>
+      </div>
+      <div class="movie-pic">
+        <img class="img" src="img.jpg"/>
+        <h4 class="text-bold">Godzilla vs. Kong <span class="text-light">(2021)</span></h4>
+        <p class="text-gray text-bold">PG-13 | 2021-03-24 | English</p>
+      </div> 
+      <div class="overview">
+        <h3 class="overview-label">Overview</h3>
+        <p class="overview-content">In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages.</p>
+      </div>
+      <div class="movie-detail">
+       
+        <div class="people-group">
+          <div class="people">
+            <h4>Adam Wingard</h4>
+            <p class="text-gray">Director</p>
+          </div>
+        </div>
+
+        <div class="people-group">
+          <div class="people">
+            <h4>Terry Rossio</h4>
+            <p class="text-gray mb-20">Writer</p>
+          </div>
+          <div class="people">
+            <h4>Terry Rossio</h4>
+            <p class="text-gray mb-20">Writer</p>
+          </div>
+          <div class="people">
+            <h4>Terry Rossio</h4>
+            <p class="text-gray mb-20">Writer</p>
+          </div>
+          <div class="people">
+            <h4>Terry Rossio</h4>
+            <p class="text-gray mb-20">Writer</p>
+          </div>
+        </div>
+
+        <div class="people-group">
+          <div class="people">
+            <h4>Terry Rossio</h4>
+            <p class="text-gray mb-20">Writer</p>
+          </div>
+          <div class="people">
+            <h4>Terry Rossio</h4>
+            <p class="text-gray mb-20">Writer</p>
+          </div>
+          <div class="people">
+            <h4>Terry Rossio</h4>
+            <p class="text-gray mb-20">Writer</p>
+          </div>
+          </div>
+          <div class="people-group">
+            <div class="people">
+              <h4>Terry Rossio</h4>
+              <p class="text-gray mb-20">Writer</p>
+            </div>
+            <div class="people">
+              <h4>Terry Rossio</h4>
+              <p class="text-gray mb-20">Writer</p>
+            </div>
+            <div class="people">
+              <h4>Terry Rossio</h4>
+              <p class="text-gray mb-20">Writer</p>
+            </div>
+          </div>
+  
+          <div class="people-group">
+              <div class="people">
+                <h4>Terry Rossio</h4>
+                <p class="text-gray mb-20">Writer</p>
+              </div>
+              <div class="people">
+                <h4>Terry Rossio</h4>
+                <p class="text-gray mb-20">Writer</p>
+              </div>
+              <div class="people">
+                <h4>Terry Rossio</h4>
+                <p class="text-gray mb-20">Writer</p>
+              </div>
+            </div>
+        </div>
+        </div>
+      </div> -->

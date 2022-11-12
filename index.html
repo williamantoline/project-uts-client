@@ -15,20 +15,6 @@
         <div class="loading-interaction" id="loadingInteraction">
           Loading...
         </div>
-        <!-- <div class="movie">
-          <div class="movie-left">
-            <img class="img" src="img.jpg" alt="img.jpg" />
-          </div>
-          <div class="movie-center">
-            <p class="movie-title">Gorilla vs King Kong</p>
-            <p class="movie-description">Lorem Ipsum</p>
-          </div>
-          <div class="movie-right">
-            <a href="/detail.html">
-              <img src="arrow-right.svg" />
-            </a>
-          </div>
-        </div> -->
       </div>
     </div>
   </body>
@@ -36,6 +22,8 @@
   <script>
     let movieListEl = document.getElementById("movieList");
     let loadingInteractionEl = document.getElementById("loadingInteraction");
+
+    const endpoint = "http://localhost:3000/api/movies";
 
     const buildElement = (tag, meta, inner = "") => {
       let _tag = document.createElement(tag);
@@ -48,7 +36,7 @@
     }
 
     const buildItem = (data) => {
-      _img = buildElement("img", {"class": "img", "src": "img.jpg"});
+      _img = buildElement("img", {"class": "img", "src": `https://image.tmdb.org/t/p/w220_and_h330_face${data.poster_path}`});
       _movie_left = buildElement("div", {"class": "movie-left"});
       _movie_left.appendChild(_img);
 
@@ -59,7 +47,7 @@
       _movie_center.appendChild(_p_two);
 
       _img = buildElement("img", {"class": "img", "src": "ic_arrow_right.svg"});
-      _a = buildElement("a", {"href": "detail.html"});
+      _a = buildElement("a", {"href": "movie.html"});
       _a.appendChild(_img);
       _movie_right = buildElement("div", {"class": "movie-right"});
       _movie_right.appendChild(_a);
@@ -81,7 +69,7 @@
       });
     }
 
-    axios.get("http://localhost:3000/api/movies")
+    axios.get(endpoint)
     .then(res => loadMoviesElements(res.data));
   </script>
 </html>

@@ -2,6 +2,11 @@
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
 }
 
 body {
@@ -19,7 +24,6 @@ body {
   width: 640px;
   background: white;
 }
-
 @media only screen and (max-width: 640px) {
   .container {
     width: 100%;
@@ -30,14 +34,40 @@ body {
   padding: 10px;
   background-color: #a8a8a8;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   box-shadow: 0px 0px 1px 1px gray;
 }
-
+.header .left, .header .right {
+  width: 12%;
+}
+.header .center {
+  width: 76%;
+}
 .header .movie-title {
   font-size: 20px;
   margin: auto;
+  text-align: center;
+}
+.header a {
+  color: rgb(4, 4, 201);
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.header a div {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.header a img {
+  width: 24px;
 }
 
 .movie-pic{
@@ -45,70 +75,70 @@ body {
   text-align: center;
   padding-bottom: 15px;
 }
-
 .movie-pic .img {
   margin: auto;
-  padding: 15px;
-  width: 250px;
-  height: 350px;
+  padding: 24px 0 12px 0;
+  width: 240px;
+  height: 320px;
   display: block;
 }
+.movie-pic h4 {
+  font-size: 20px;
+}
 
-
-.overview{
-  padding: 5px 20px;
+.overview {
+  overflow-y: scroll;
+}
+.overview-label{
+  padding: 12px 28px;
   background-color: #afafaf;
+}
+.overview-content {
+  padding: 16px 28px;
+  height: 56px;
+  overflow-y: scroll;
 }
 
 .movie-detail{
-  padding: 20px;
+  padding: 12px 28px;
   font-weight: bold;
+  height: 240px;
+  overflow-y: scroll;
 }
 
-.movie-overview{
-  margin-bottom: 20px;
+.people-group {
+  margin-bottom: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.people-group .people {
+  padding: 10px 0;
+  box-sizing: border-box;
+  width: 50%;
+}
+.people-group .people p {
+  font-size: 14px;
+}
+@media only screen and (max-width: 420px) {
+  .people-group .people {
+    width: 100%;
+  }
 }
 
-.director{
+.mb-6 {
+  margin-bottom: 6px;
+}
+.mb-18 {
   margin-bottom: 18px;
 }
-
-.writer{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.cast{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.left{
-  width: 50%;
-}
-
-.right{
-  width: 50%;
-}
-
-.cast{
-  display: flex;
-}
-
 .text-bold{
   font-weight: bold;
 }
-
-.mb-18{
-  margin-bottom: 18px;
-}
-
 .text-light{
   font-weight: 400;
 }
-
 .text-gray {
-  color: #a8a8a8;
+  color: #7e7e7e;
 }
