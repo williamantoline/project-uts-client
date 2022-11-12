@@ -5,76 +5,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail | Godzilla vs. Kong</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
   </head>
-  <body class="bg-dark">
-    <div class="container bg-white">
-      <div class="mt-5 px-0">
-        <div class="row bg-grey">
-          <div class="col-3 my-auto">
-            <button class="bg-transparent border-0 text-primary" onclick="location.href = 'index.html';">Back</button>
+  <body class="detail">
+    <div class="container detail-container">
+
+     <div class="detail-header">
+      <div class="left">
+        <a href="index.html">
+          <div>
+            <img src="ic_arrow_left.svg" alt="<" />
+            <span>Back</span>
           </div>
-          <h1 class="p-2 col-6 text-center">Godzilla vs. Kong</h1>
-          <div class="col-3"></div>
-        </div>  
-        <div class="row mx-center pt-4">
-          <img class="img-fluid mx-auto pb-4 d-block image-poster" src="https://image.tmdb.org/t/p/w220_and_h330_face/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg" alt="Godzilla">
-          <h4 class="text-center mb-0"><b>Godzilla vs. Kong </b><a>(2021)</a></h4>
-          <p class="text-center">PG-13 | 2021-03-24 | English</p>
-        </div>
-        <div class="row bg-grey">
-          <div class="col-12">
-            <h3>Overview</h3>
-          </div>
-        </div> 
-        <div class="row py-2">
-          <div class="col-12">
-            <p><b>In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages.</b></p>
-          </div>
-        </div>
-        <div class="row py-2">
-          <div class="col-6">
-            <h4 class="mb-0"><b>Adam Wingard</b></h4>
-            <p>Director</p>
-          </div>
-        </div>
-        <div class="row py-2">
-          <div class="col-6">
-            <h4 class="mb-0"><b>Terry Rossio</b></h4>
-            <p>Writer</p>
-          </div>
-          <div class="col-6">
-            <h4 class="mb-0"><b>Michael Dougherty</b></h4>
-            <p>Writer</p>
-          </div>
-          <div class="col-6">
-            <h4 class="mb-0"><b>Eric Pearson</b></h4>
-            <p>Writer</p>
-          </div>
-          <div class="col-6">
-            <h4 class="mb-0"><b>Max Borenstein</b></h4>
-            <p>Writer</p>
-          </div>
-          <div class="col-6">
-            <h4 class="mb-0"><b>Zach Shields</b></h4>
-            <p>Writer</p>
-          </div>
-        </div>
-        <div class="row py-2">
-          <div class="col-6">
-            <h4 class="mb-0"><b>Alexander Skarsgård</b></h4>
-            <p>Cast</p>
-          </div>
-          <div class="col-6">
-            <h4 class="mb-0"><b>Millie Bobby Brown</b></h4>
-            <p>Cast</p>
-          </div>
-          <div class="col-6">
-            <h4 class="mb-0"><b>Rebecca Hall</b></h4>
-            <p>Cast</p>
-          </div>
-        </div>
+        </a>
       </div>
+      <div class="center">
+        <p class="detail-header-title">
+          Godzilla vs. Kong
+        </p>
+      </div>
+      <div class="right">
+      </div>
+     </div>
+
+     <div class="detail-preview">
+
+      <div class="detail-poster">
+        <img src="img.jpg" />
+      </div>
+
+      <p class="detail-title">
+        <span id="movieTitle">Godzilla vs. Kong</span> 
+        (<span id="movieYear">2021</span>)
+      </p>
+    
+      <p class="detail-info">
+        <span id="movieCertification">PG-13</span> |
+        <span id="movieReleaseDate">2021-03-24</span> |
+        <span id="movieOriginalLanguage">English</span>
+      </p>
+
+     </div>
+
+     <div class="detail-body">
+      <div class="detail-overview">
+        <div class="detail-overview-header">
+          <p>Overview</p>
+        </div>
+        <p class="detail-overview-text" id="movieOverview">In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages.</p>
+      </div>
+      <div class="detail-people">
+
+        <div class="detail-people-section">
+
+          <div class="detail-people-item">
+            <div class="left">
+              <p class="people-name">Adam Wingard</p>
+              <p class="people-position">Director</p>
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- TODO: refine people components -->
+        <div class="detail-people-section">
+
+          <div class="detail-people-item">
+            <div class="left">
+              <p class="people-name">Adam Wingard</p>
+              <p class="people-position">Director</p>
+            </div>
+            <div class="right">
+              <p class="people-name">Adam Wingard</p>
+              <p class="people-position">Director</p>
+            </div>
+          </div>
+          <div class="detail-people-item">
+            <div class="left">
+              <p class="people-name">Adam Wingard</p>
+              <p class="people-position">Director</p>
+            </div>
+            <div class="right">
+              <p class="people-name">Adam Wingard</p>
+              <p class="people-position">Director</p>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+     </div>
     </div>
   </body>
 </html>
